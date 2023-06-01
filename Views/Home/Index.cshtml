@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Reverse Name";
+}
+
+<h1>Reverse Name</h1>
+
+<form asp-action="ReverseName" method="post">
+    <div>
+        <label for="name">Enter your Wrod:</label>
+    </div>
+    <div>
+    	<input type="text" name="name" />
+    </div>
+    <input type="submit"value="Reverse Name" />
+</form>
+
+
+@if (ViewBag.Message == "not valid")
+{
+    <p class="result">Please enter a valid name</p>
+}
+else
+{
+    <h2>Your reversed name is: </h2>
+    <h2>@ViewBag.Message</h2>
+}
